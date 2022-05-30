@@ -1,7 +1,9 @@
 function App() {
-  return (
-    <h1>App.tsx</h1>
-  );
+    return (
+        <main className="bg-[url('./assets/background.png')]">
+            <h1>ok</h1>
+        </main>
+    )
 }
 
-export default App;
+export default App
