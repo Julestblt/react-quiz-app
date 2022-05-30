@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="text-center">
+        <footer className="text-center absolute bottom-0 w-full py-4 font-montserrat">
             <p>
                 created by{' '}
                 <a
