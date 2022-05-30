@@ -1,4 +1,4 @@
-import { useQuizApi } from './quiz.api'
+import { fetchQuizApi } from './quiz.api'
 
 type QuizCategory =
     | 'linux'
@@ -21,7 +21,8 @@ interface QuizApi {
 }
 
 const quizApi: QuizApi = {
-    getRandomQuiz: (queryParams) => useQuizApi('GET', 'questions', queryParams),
+    getRandomQuiz: (queryParams) =>
+        fetchQuizApi('GET', 'questions', queryParams),
 }
 
 export interface Answers {

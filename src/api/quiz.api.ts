@@ -18,7 +18,7 @@ const getQuizHeaders = () => {
     return headers
 }
 
-const useQuizApi = async (
+const fetchQuizApi = async (
     method: HttpMethod,
     endpoint: string,
     queryParams?: QueryParams
@@ -33,4 +33,4 @@ const useQuizApi = async (
     return await axios(config)
 }
 
-export { useQuizApi }
+export { fetchQuizApi }
