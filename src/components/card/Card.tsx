@@ -6,11 +6,17 @@ interface CardProps {
     title?: string
     children?: React.ReactNode
     titleCentered?: boolean
+    hideSvg?: boolean
 }
 
-const baseTitleClasses = 'text-dark-blue text-2xl font-bold font-poppins'
+const baseTitleClasses = 'text-dark-blue text-2xl font-bold'
 
-const Card = ({ title, children, titleCentered = false }: CardProps) => {
+const Card = ({
+    title,
+    children,
+    titleCentered = false,
+    hideSvg,
+}: CardProps) => {
     const [titleClasses, setTitleClasses] = useState<string>(baseTitleClasses)
 
     useEffect(() => {
@@ -19,15 +25,18 @@ const Card = ({ title, children, titleCentered = false }: CardProps) => {
     }, [])
 
     return (
-        <section className="w-1/4">
+        <section className="lg:w-2/5 md:w-3/5 w-11/12 font-poppins">
             <h1 className="text-4xl font-bold my-3">Quiz</h1>
             <article className="bg-white rounded-3xl relative w-full py-16 px-8">
-                <img
-                    width={115}
-                    className="absolute -top-12 right-0"
-                    src={adventure}
-                    alt=""
-                />
+                {!hideSvg && (
+                    <img
+                        width={115}
+                        className="absolute -top-12 right-0"
+                        src={adventure}
+                        alt=""
+                    />
+                )}
+
                 {title && <h2 className={titleClasses}>{title}</h2>}
                 {children}
             </article>
