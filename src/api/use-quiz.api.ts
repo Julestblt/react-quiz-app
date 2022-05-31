@@ -22,7 +22,7 @@ interface QuizApi {
 
 const quizApi: QuizApi = {
     getRandomQuiz: (queryParams) =>
-        fetchQuizApi('GET', 'questions', queryParams),
+        fetchQuizApi('GET', 'questions', { ...queryParams, limit: '10' }),
 }
 
 export interface Answers {
