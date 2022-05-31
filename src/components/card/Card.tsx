@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import adventure from '../../assets/svg/adventure.svg'
 
 interface CardProps {
-    title: string
+    title?: string
     children?: React.ReactNode
     titleCentered?: boolean
 }
@@ -28,7 +28,7 @@ const Card = ({ title, children, titleCentered = false }: CardProps) => {
                     src={adventure}
                     alt=""
                 />
-                <h2 className={titleClasses}>{title}</h2>
+                {title && <h2 className={titleClasses}>{title}</h2>}
                 {children}
             </article>
         </section>
