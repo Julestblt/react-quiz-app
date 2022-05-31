@@ -7,6 +7,7 @@ export type ButtonVariant =
     | 'selected'
     | 'success'
     | 'error'
+    | 'ghost'
 
 interface ButtonProps {
     children?: string | React.ReactNode
@@ -29,6 +30,7 @@ const buttonVariants = {
     selected: 'border bg-orange text-white border-orange',
     success: 'border bg-green border-green text-white',
     error: 'border bg-red border-red text-white',
+    ghost: 'border border-dark-blue bg-white text-dark-blue border-2 hover:border-dark-blue hover:bg-dark-blue hover:text-white',
 }
 
 const Button = ({
