@@ -8,6 +8,8 @@ module.exports = {
             orange: '#F9A826',
             white: '#FFFFFF',
             dark: '#000000',
+            green: '#60BF88',
+            red: '#EA8282',
         },
         fontFamily: {
             montserrat: ['Montserrat', 'sans-serif'],
