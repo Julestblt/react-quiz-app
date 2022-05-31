@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Card, Button, Select } from '../../components'
 import { categoriesOptions, difficultyOptions } from '../../constants/constants'
 

@@ -11,13 +11,13 @@ export type QuizCategory =
 
 export type Difficulty = 'easy' | 'medium' | 'hard'
 
-export type RandomQuizParams = {
+export type QuizParams = {
     category: QuizCategory
     difficulty: Difficulty
 }
 
 interface QuizApi {
-    getRandomQuiz: (queryParams: RandomQuizParams) => Promise<RootObject[]>
+    getRandomQuiz: (queryParams: QuizParams) => Promise<RootObject[]>
 }
 
 const quizApi: QuizApi = {
