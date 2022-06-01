@@ -15,14 +15,9 @@ const ResultCard = ({ score }: ResultCardProps) => {
 
     return (
         <Card hideSvg>
+            <img onLoad={imageLoaded} className="mx-auto" src={winner} alt="" />
             {isLoaded ? (
                 <>
-                    <img
-                        onLoad={imageLoaded}
-                        className="mx-auto"
-                        src={winner}
-                        alt=""
-                    />
                     <h1 className="text-dark-blue text-5xl font-poppins font-bold text-center my-10">
                         Results
                     </h1>
