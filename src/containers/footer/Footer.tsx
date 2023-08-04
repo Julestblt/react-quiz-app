@@ -8,7 +8,7 @@ const Footer = () => {
                     target="_blank"
                     href="https://github.com/Julestblt"
                 >
-                    Jules
+                    JuleZ
                 </a>{' '}
                 - devChallenges.io
             </p>
